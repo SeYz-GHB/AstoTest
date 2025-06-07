@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partnerships - Neon Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-green': '#00ff41',
+                        'neon-green-dark': '#00cc33',
+                        'cyber-black': '#0a0a0a',
+                        'cyber-gray': '#1a1a1a'
+                    },
+                    animation: {
+                        'pulse-glow': 'pulse-glow 2s ease-in-out infinite alternate',
+                        'float': 'float 6s ease-in-out infinite',
+                        'slide-up': 'slide-up 0.8s ease-out',
+                        'neon-flicker': 'neon-flicker 2s infinite'
+                    },
+                    keyframes: {
+                        'pulse-glow': {
+                            '0%': { 
+                                boxShadow: '0 0 20px rgba(0, 255, 65, 0.4), 0 0 40px rgba(0, 255, 65, 0.2), 0 0 60px rgba(0, 255, 65, 0.1)' 
+                            },
+                            '100%': { 
+                                boxShadow: '0 0 30px rgba(0, 255, 65, 0.8), 0 0 60px rgba(0, 255, 65, 0.4), 0 0 90px rgba(0, 255, 65, 0.2)' 
+                            }
+                        },
+                        'float': {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        'slide-up': {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        'neon-flicker': {
+                            '0%, 100%': { textShadow: '0 0 10px #00ff41, 0 0 20px #00ff41, 0 0 30px #00ff41' },
+                            '50%': { textShadow: '0 0 5px #00ff41, 0 0 10px #00ff41, 0 0 15px #00ff41' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+        }
+        .neon-border {
+            border: 2px solid #00ff41;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.3), inset 0 0 20px rgba(0, 255, 65, 0.1);
+        }
+        .glass-effect {
+            background: rgba(26, 26, 26, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 255, 65, 0.2);
+        }
+        .hover-glow:hover {
+            box-shadow: 0 0 30px rgba(0, 255, 65, 0.6);
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(0, 255, 65, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-cyber-black text-white min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-effect">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-neon-green animate-neon-flicker">
+                    NEON TECH
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="hover:text-neon-green transition-colors duration-300">Home</a>
+                    <a href="#" class="hover:text-neon-green transition-colors duration-300">About</a>
+                    <a href="#" class="text-neon-green font-semibold">Partnerships</a>
+                    <a href="#" class="hover:text-neon-green transition-colors duration-300">Contact</a>
+                </div>
+                <button class="md:hidden text-neon-green">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-6xl md:text-8xl font-bold mb-8 animate-slide-up">
+                <span class="text-glow text-neon-green">PARTNER</span>
+                <br>
+                <span class="text-white">WITH US</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto animate-slide-up">
+                Join forces with industry leaders. Create revolutionary solutions. Shape the future of technology together.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center animate-slide-up">
+                <button class="neon-border bg-transparent text-neon-green px-8 py-4 font-semibold hover-glow animate-pulse-glow">
+                    BECOME A PARTNER
+                </button>
+                <button class="bg-neon-green text-black px-8 py-4 font-semibold hover:bg-neon-green-dark transition-colors duration-300">
+                    VIEW PARTNERSHIPS
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Types -->
+    <section class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-glow text-neon-green">
+                PARTNERSHIP MODELS
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-effect p-8 rounded-lg hover-glow animate-float">
+                    <div class="text-neon-green text-4xl mb-6">⚡</div>
+                    <h3 class="text-2xl font-bold mb-4 text-neon-green">TECHNOLOGY</h3>
+                    <p class="text-gray-300 mb-6">Integrate cutting-edge solutions and co-develop next-generation products that push boundaries.</p>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li>• API Integration</li>
+                        <li>• Joint Development</li>
+                        <li>• Technical Support</li>
+                        <li>• Innovation Labs</li>
+                    </ul>
+                </div>
+                <div class="glass-effect p-8 rounded-lg hover-glow animate-float" style="animation-delay: 0.2s;">
+                    <div class="text-neon-green text-4xl mb-6">🚀</div>
+                    <h3 class="text-2xl font-bold mb-4 text-neon-green">STRATEGIC</h3>
+                    <p class="text-gray-300 mb-6">Build long-term alliances that amplify market reach and create mutual growth opportunities.</p>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li>• Market Expansion</li>
+                        <li>• Brand Collaboration</li>
+                        <li>• Resource Sharing</li>
+                        <li>• Joint Ventures</li>
+                    </ul>
+                </div>
+                <div class="glass-effect p-8 rounded-lg hover-glow animate-float" style="animation-delay: 0.4s;">
+                    <div class="text-neon-green text-4xl mb-6">💎</div>
+                    <h3 class="text-2xl font-bold mb-4 text-neon-green">PREMIUM</h3>
+                    <p class="text-gray-300 mb-6">Exclusive partnerships with premium benefits, priority support, and custom solutions.</p>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li>• Dedicated Support</li>
+                        <li>• Custom Solutions</li>
+                        <li>• Priority Access</li>
+                        <li>• Executive Liaison</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Partners -->
+    <section class="py-20 px-6 bg-gradient-to-r from-cyber-black to-cyber-gray">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-glow text-neon-green">
+                TRUSTED BY LEADERS
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="glass-effect p-6 rounded-lg text-center hover-glow">
+                    <div class="text-2xl font-bold text-neon-green mb-2">APEX</div>
+                    <div class="text-sm text-gray-400">Technology Leader</div>
+                </div>
+                <div class="glass-effect p-6 rounded-lg text-center hover-glow">
+                    <div class="text-2xl font-bold text-neon-green mb-2">VERTEX</div>
+                    <div class="text-sm text-gray-400">Innovation Partner</div>
+                </div>
+                <div class="glass-effect p-6 rounded-lg text-center hover-glow">
+                    <div class="text-2xl font-bold text-neon-green mb-2">NEXUS</div>
+                    <div class="text-sm text-gray-400">Strategic Alliance</div>
+                </div>
+                <div class="glass-effect p-6 rounded-lg text-center hover-glow">
+                    <div class="text-2xl font-bold text-neon-green mb-2">PRIME</div>
+                    <div class="text-sm text-gray-400">Premium Partner</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8 text-glow text-neon-green">
+                        WHY PARTNER WITH US?
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="text-neon-green text-2xl">→</div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-neon-green">Global Reach</h3>
+                                <p class="text-gray-300">Access to international markets and distribution networks spanning 50+ countries.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="text-neon-green text-2xl">→</div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-neon-green">Innovation Focus</h3>
+                                <p class="text-gray-300">Cutting-edge R&D facilities and a team of 500+ engineers and scientists.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="text-neon-green text-2xl">→</div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-neon-green">Proven Track Record</h3>
+                                <p class="text-gray-300">Over 200 successful partnerships and $2B+ in combined partner revenue growth.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="glass-effect p-8 rounded-lg neon-border animate-pulse-glow">
+                        <div class="text-center">
+                            <div class="text-6xl font-bold text-neon-green mb-4">200+</div>
+                            <div class="text-xl text-gray-300 mb-8">Active Partnerships</div>
+                            <div class="grid grid-cols-2 gap-4 text-center">
+                                <div>
+                                    <div class="text-2xl font-bold text-neon-green">50+</div>
+                                    <div class="text-sm text-gray-400">Countries</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-neon-green">$2B+</div>
+                                    <div class="text-sm text-gray-400">Revenue Growth</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-6 bg-gradient-to-r from-cyber-gray to-cyber-black">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-6xl font-bold mb-8 text-glow text-neon-green">
+                READY TO INNOVATE?
+            </h2>
+            <p class="text-xl text-gray-300 mb-12">
+                Join our ecosystem of forward-thinking partners and build the future together.
+            </p>
+            <div class="glass-effect p-8 rounded-lg neon-border max-w-2xl mx-auto">
+                <h3 class="text-2xl font-bold mb-6 text-neon-green">Start Your Partnership Journey</h3>
+                <form class="space-y-4">
+                    <input type="text" placeholder="Company Name" class="w-full p-4 bg-cyber-black border border-neon-green text-white rounded focus:outline-none focus:ring-2 focus:ring-neon-green">
+                    <input type="email" placeholder="Email Address" class="w-full p-4 bg-cyber-black border border-neon-green text-white rounded focus:outline-none focus:ring-2 focus:ring-neon-green">
+                    <select class="w-full p-4 bg-cyber-black border border-neon-green text-white rounded focus:outline-none focus:ring-2 focus:ring-neon-green">
+                        <option>Partnership Type</option>
+                        <option>Technology Partnership</option>
+                        <option>Strategic Partnership</option>
+                        <option>Premium Partnership</option>
+                    </select>
+                    <textarea placeholder="Tell us about your partnership goals..." class="w-full p-4 bg-cyber-black border border-neon-green text-white rounded h-32 focus:outline-none focus:ring-2 focus:ring-neon-green"></textarea>
+                    <button type="submit" class="w-full bg-neon-green text-black py-4 font-bold rounded hover:bg-neon-green-dark transition-colors duration-300 animate-pulse-glow">
+                        SUBMIT PARTNERSHIP REQUEST
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 px-6 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold text-neon-green mb-4 animate-neon-flicker">NEON TECH</div>
+                    <p class="text-gray-400">Building the future through innovative partnerships and cutting-edge technology solutions.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-neon-green mb-4">Partnerships</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-neon-green transition-colors">Technology Partners</a></li>
+                        <li><a href="#" class="hover:text-neon-green transition-colors">Strategic Alliances</a></li>
+                        <li><a href="#" class="hover:text-neon-green transition-colors">Premium Program</a></li>
+                        <li><a href="#" class="hover:text-neon-green transition-colors">Partner Portal</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-neon-green mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-neon-green transition-colors">Documentation</a></li>
+                        <li><a href="#" class="hover:text-neon-green transition-colors">API Reference</a></li>
+                        <li><a href="#" class="hover:text-neon-green transition-colors">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-neon-green transition-colors">Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-neon-green mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>partnerships@neontech.com</li>
+                        <li>+1 (555) 123-4567</li>
+                        <li>Silicon Valley, CA</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Neon Tech. All rights reserved. | Powered by innovation.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add smooth scrolling and interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scroll for anchor links
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // Add scroll-triggered animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements for scroll animations
+            const animatedElements = document.querySelectorAll('.glass-effect, .animate-slide-up');
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(el);
+            });
+
+            // Form submission handler
+            const form = document.querySelector('form');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // Add form submission logic here
+                    alert('Partnership request submitted! We\'ll be in touch soon.');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

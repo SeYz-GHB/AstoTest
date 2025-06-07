@@ -1,0 +1,245 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  font-family: "Exo 2", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Orbitron", sans-serif;
+ 
+}
+
+@layer utilities {
+  /* Custom Animations */
+  .animate-fadeIn {
+    animation: fadeIn 1s ease-out;
+  }
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+
+  .animate-scaleUp {
+    animation: scaleUp 1s ease-out;
+  }
+  @keyframes scaleUp {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+  }
+
+
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .animate-rotate {
+    animation: rotate 1s linear;
+  }
+
+  @keyframes slideInLeft {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+  }
+
+  .animate-slideInLeft {
+    animation: slideInLeft 1s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fadeInUp {
+    animation: fadeInUp 1s ease-out;
+  }
+
+  @keyframes flip {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(180deg); }
+  }
+
+  .animate-flip {
+    animation: flip 1s ease-out;
+  }
+
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+  }
+
+  .animate-shake {
+    animation: shake 0.5s ease-in-out;
+  }
+
+  @keyframes zoomIn {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+  }
+
+  .animate-zoomIn {
+    animation: zoomIn 0.5s ease-out;
+  }
+}
+/* index.css */
+
+h1 {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  h5 {
+    font-size: 1.1rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  h6 {
+    font-size: 0.9rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+.animation_O {
+  
+  background: linear-gradient(
+    90deg,
+    #c0c0c0 0%,
+    #ffffff 40%,
+    #e0e0e0 50%,
+    #ffffff 60%,
+    #c0c0c0 100%
+  );
+  background-size: 200% 100%;
+  animation: RGB_White_From_left_to_right 1s infinite ease-in-out;
+  box-shadow: 0 0 25px 10px rgba(255, 255, 255, 0.8),
+              0 0 50px 30px rgba(255, 255, 255, 0.6),
+              0 0 50px 20px rgba(255, 255, 255, 0.6);
+  border-radius: 50%; /* <--- makes it a circle */
+}
+
+@keyframes RGB_White_From_left_to_right {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+/* Add this in your CSS file or within a <style> tag in your component */
+.scrollbar-hide::-webkit-scrollbar {
+  height: 2px; /* Very thin scrollbar height */
+}
+
+.scrollbar-hide::-webkit-scrollbar-track {
+  background: transparent; /* Optional: makes track invisible */
+}
+
+.scrollbar-hide::-webkit-scrollbar-thumb {
+  background-color: #888; /* Scrollbar color */
+  border-radius: 2px; /* Optional: rounded edges */
+  height: 2px; /* Ensure thumb is thin */
+}
+
+.scrollbar-hide::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker color on hover */
+}
+/* Use Exo 2 */
+.title {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Use Orbitron */
+.logo {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+}
